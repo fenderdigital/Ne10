@@ -51,30 +51,32 @@ function(set_file_to_c files)
 endfunction()
 
 if(IOS_PLATFORM)
-  # because ios's ARM assembler(Clang) doesn't support GNU as(GAS)'s assembly
-  # well, we convert all GAS assembly to Clang assembly here.
-  function(convert_gas gas_files ios_files)
-    #message(STATUS "in convert_gas function:${${gas_files}}")
-    foreach(gas_file ${${gas_files}})
-      string(REGEX REPLACE
-        ".*\(NE10_.*\).neon.s"
-        "${NE10_BINARY_DIR}/modules/CMakeFiles/NE10.dir/\\1_ios.neon.s"
-        ios_file
-        ${gas_file})
-      list(APPEND ios_files_tmp ${ios_file})
+  if(${NE10_IOS_TARGET_ARCH} STREQUAL "armv7")
+    # because ios's ARM assembler(Clang) doesn't support GNU as(GAS)'s assembly
+    # well, we convert all GAS assembly to Clang assembly here.
+    function(convert_gas gas_files ios_files)
+      #message(STATUS "in convert_gas function:${${gas_files}}")
+      foreach(gas_file ${${gas_files}})
+        string(REGEX REPLACE
+          ".*\(NE10_.*\).neon.s"
+          "${NE10_BINARY_DIR}/modules/CMakeFiles/NE10.dir/\\1_ios.neon.s"
+          ios_file
+          ${gas_file})
+        list(APPEND ios_files_tmp ${ios_file})
 
-      #call a script to convert each assembly file in GAS to Clang
-      add_custom_command(
-        OUTPUT ${ios_file}
-        COMMAND ${NE10_SOURCE_DIR}/tools/gas2ios_convert.py
-        ${gas_file} ${ios_file}
-        DEPENDS ${gas_file}
-        )
-    endforeach()
+        #call a script to convert each assembly file in GAS to Clang
+        add_custom_command(
+          OUTPUT ${ios_file}
+          COMMAND ${NE10_SOURCE_DIR}/tools/gas2ios_convert.py
+          ${gas_file} ${ios_file}
+          DEPENDS ${gas_file}
+          )
+      endforeach()
 
-    #return value by setting the variable to PARENT_SCOPE
-    set(${ios_files} ${ios_files_tmp} PARENT_SCOPE)
-  endfunction()
+      #return value by setting the variable to PARENT_SCOPE
+      set(${ios_files} ${ios_files_tmp} PARENT_SCOPE)
+    endfunction()
+  endif()
 endif(IOS_PLATFORM)
 
 if(NE10_ENABLE_MATH)
@@ -148,17 +150,25 @@ if(NE10_ENABLE_MATH)
         ${PROJECT_SOURCE_DIR}/modules/math/NE10_identitymat.neon.s
     )
 if(IOS_PLATFORM)
+  if(${NE10_IOS_TARGET_ARCH} STREQUAL "armv7")
     convert_gas(NE10_MATH_NEON_SRCS NE10_MATH_IOS_NEON_SRCS)
     #message(STATUS "convert_gas:${NE10_MATH_IOS_NEON_SRCS}")
     set_file_to_c(NE10_MATH_IOS_NEON_SRCS)
+  endif()
 else(IOS_PLATFORM)
     set_file_to_c(NE10_MATH_NEON_SRCS)
 endif(IOS_PLATFORM)
 
     # Add math init files.
+if(${NE10_IOS_TARGET_ARCH} STREQUAL "armv7")
     set(NE10_MATH_INIT_SRCS
         ${PROJECT_SOURCE_DIR}/modules/math/NE10_init_math.c
     )
+else()
+    set(NE10_MATH_INIT_SRCS
+        ${PROJECT_SOURCE_DIR}/modules/math/NE10_init_math_NO_NEON.c
+    )
+endif()
 
     # Add math files
     set(NE10_INIT_SRCS ${NE10_INIT_SRCS} ${NE10_MATH_INIT_SRCS})

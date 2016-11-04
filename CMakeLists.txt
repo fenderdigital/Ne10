@@ -70,7 +70,7 @@ if(DEFINED NE10_LINUX_TARGET_ARCH)
 endif()
 
 if(DEFINED NE10_IOS_TARGET_ARCH)
-    if(${NE10_IOS_TARGET_ARCH} STREQUAL "armv7")
+    if("${NE10_IOS_TARGET_ARCH}" MATCHES "armv7")
         set(NE10_TARGET_ARCH "armv7")
     else()
         set(NE10_TARGET_ARCH "aarch64")
@@ -131,8 +131,7 @@ if(ANDROID_PLATFORM)
     ${CMAKE_C_COMPILER}
     ${CMAKE_CXX_COMPILER}
     ${CMAKE_ASM_COMPILER}")
-    message("-- CMAKE_C_FLAGS:
-    ${CMAKE_C_FLAGS}")
+    message("-- CMAKE_C_FLAGS: ${CMAKE_C_FLAGS}")
 elseif(GNULINUX_PLATFORM)
     if(${NE10_TARGET_ARCH} STREQUAL "armv7")
       set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mthumb-interwork -mthumb -march=armv7-a -mfpu=vfp3 -funsafe-math-optimizations")
@@ -145,22 +144,21 @@ elseif(IOS_PLATFORM)
     #5.0.2 would generate code for iOS 7.0, which would lead runtime
     #error when run on device with earlier iOS version.
     if(NOT MIN_IOS_VER)
-      set(MIN_IOS_VER "5.0")
+      set(MIN_IOS_VER "8.2")
     endif()
-    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -miphoneos-version-min=" ${MIN_IOS_VER})
-    set(CMAKE_ASM_FLAGS "${CMAKE_C_FLAGS} -mfpu=neon -miphoneos-version-min=" ${MIN_IOS_VER})
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fembed-bitcode -miphoneos-version-min=${MIN_IOS_VER}")
+    set(CMAKE_ASM_FLAGS "${CMAKE_ASM_FLAGS} -miphoneos-version-min=${MIN_IOS_VER}")
 
     if(${NE10_TARGET_ARCH} STREQUAL "armv7")
         set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mfpu=vfp3 -arch armv7 -arch armv7s")
-        set(CMAKE_ASM_FLAGS "${CMAKE_C_FLAGS} -arch armv7 -arch armv7s")
+        set(CMAKE_ASM_FLAGS "${CMAKE_ASM_FLAGS} -arch armv7 -arch armv7s")
     else()
         set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -arch arm64")
     endif()
 
     message("-- CFLAGS: ${CMAKE_C_FLAGS}")
-
-    string(REPLACE ";" "" CMAKE_C_FLAGS ${CMAKE_C_FLAGS})
-    string(REPLACE ";" "" CMAKE_ASM_FLAGS ${CMAKE_ASM_FLAGS})
+    message("-- ASMFLAGS: ${CMAKE_ASM_FLAGS}")
+    
 endif()
 
 set(CMAKE_CXX_FLAGS ${CMAKE_C_FLAGS})
