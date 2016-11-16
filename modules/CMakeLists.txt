@@ -50,6 +50,19 @@ function(set_file_to_c files)
   endforeach(file)
 endfunction()
 
+#Tell CMake these files need to go to the C compiler
+function(force_file_to_c files)
+    set(FLAGS
+        "-x assembler-with-cpp -Wa,-I${PROJECT_SOURCE_DIR}/inc -Wa,-I${PROJECT_SOURCE_DIR}/common -Wa,-I${PROJECT_SOURCE_DIR}/modules/math" )
+    foreach(file ${${files}})
+        set_property (SOURCE ${file} PROPERTY LANGUAGE C)
+        set_source_files_properties(
+            ${file} PROPERTIES COMPILE_FLAGS
+            ${FLAGS}
+        )
+    endforeach(file)
+endfunction()
+
 if(IOS_PLATFORM)
   if(${NE10_IOS_TARGET_ARCH} STREQUAL "armv7")
     # because ios's ARM assembler(Clang) doesn't support GNU as(GAS)'s assembly
@@ -170,6 +183,17 @@ else()
     )
 endif()
 
+    # Add math init files.
+if(${NE10_LINUX_TARGET_ARCH} STREQUAL "x86_64")
+    set(NE10_MATH_INIT_SRCS
+        ${PROJECT_SOURCE_DIR}/modules/math/NE10_init_math_NO_NEON.c
+    )
+else()
+    set(NE10_MATH_INIT_SRCS
+        ${PROJECT_SOURCE_DIR}/modules/math/NE10_init_math.c
+    )
+endif()
+
     # Add math files
     set(NE10_INIT_SRCS ${NE10_INIT_SRCS} ${NE10_MATH_INIT_SRCS})
     set(NE10_C_SRCS ${NE10_C_SRCS} ${NE10_MATH_C_SRCS})
@@ -231,22 +255,30 @@ if(NE10_ENABLE_DSP)
             ${PROJECT_SOURCE_DIR}/modules/dsp/NE10_fft_int16.neon.c
         )
     else()
-        add_definitions(-DNE10_UNROLL_LEVEL=1)
-        set(NE10_DSP_INTRINSIC_SRCS
-            ${NE10_DSP_INTRINSIC_SRCS}
-            ${PROJECT_SOURCE_DIR}/modules/dsp/NE10_fft_float32.neonintrinsic.c
-            ${PROJECT_SOURCE_DIR}/modules/dsp/NE10_fft_int32.neonintrinsic.c
-            ${PROJECT_SOURCE_DIR}/modules/dsp/NE10_fft_int16.neonintrinsic.c
-            ${PROJECT_SOURCE_DIR}/modules/dsp/NE10_rfft_float32.neonintrinsic.c
-            )
+
+        if(${NE10_LINUX_TARGET_ARCH} STREQUAL "x86_64")
+        else()
+            add_definitions(-DNE10_UNROLL_LEVEL=1)
+            set(NE10_DSP_INTRINSIC_SRCS
+                ${NE10_DSP_INTRINSIC_SRCS}
+                ${PROJECT_SOURCE_DIR}/modules/dsp/NE10_fft_float32.neonintrinsic.c
+                ${PROJECT_SOURCE_DIR}/modules/dsp/NE10_fft_int32.neonintrinsic.c
+                ${PROJECT_SOURCE_DIR}/modules/dsp/NE10_fft_int16.neonintrinsic.c
+                ${PROJECT_SOURCE_DIR}/modules/dsp/NE10_rfft_float32.neonintrinsic.c
+                )
+        endif()
     endif()
 
+
+    if(${NE10_LINUX_TARGET_ARCH} STREQUAL "x86_64")
+    else()
     # Add dsp intrinsic NEON files.
-    set(NE10_DSP_INTRINSIC_SRCS
-        ${NE10_DSP_INTRINSIC_SRCS}
-        ${PROJECT_SOURCE_DIR}/modules/dsp/NE10_fft_generic_float32.neonintrinsic.cpp
-        ${PROJECT_SOURCE_DIR}/modules/dsp/NE10_fft_generic_int32.neonintrinsic.cpp
+        set(NE10_DSP_INTRINSIC_SRCS
+            ${NE10_DSP_INTRINSIC_SRCS}
+            ${PROJECT_SOURCE_DIR}/modules/dsp/NE10_fft_generic_float32.neonintrinsic.cpp
+            ${PROJECT_SOURCE_DIR}/modules/dsp/NE10_fft_generic_int32.neonintrinsic.cpp
     )
+    endif()
 
     if(${NE10_TARGET_ARCH} STREQUAL "armv7")
         foreach(intrinsic_file ${NE10_DSP_INTRINSIC_SRCS})
@@ -254,10 +286,12 @@ if(NE10_ENABLE_DSP)
         endforeach(intrinsic_file)
     endif()
 
+message("PLATFORM ${IOS_PLATFORM}")
+
 if(IOS_PLATFORM)
     set_file_to_c(NE10_DSP_NEON_SRCS)
-else(IOS_PLATFORM)
-    set_file_to_c(NE10_DSP_NEON_SRCS)
+elseif(${NE10_LINUX_TARGET_ARCH} STREQUAL "x86_64")
+    force_file_to_c(NE10_DSP_NEON_SRCS)
 endif(IOS_PLATFORM)
     # Add dsp init files.
     set(NE10_DSP_INIT_SRCS
