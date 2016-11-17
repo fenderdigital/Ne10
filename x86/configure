@@ -1,0 +1,55 @@
+#!/bin/bash 
+
+#mkdir -p ./build/arm7/sources
+#mkdir -p ./build/arm7/product
+
+#cp -f ./NE10/Library/Modules/*.c ./build/arm7/sources
+#cp -f ./NE10/Library/Common/*.c ./build/arm7/sources
+#cp -f ./NE10/Library/Common/*.h ./build/arm7/sources
+#cp -f ./NE10/Library/Common/*.s ./build/arm7/sources
+#cp -f ./NE10/Library/Modules/dsp/*.c ./build/arm7/sources
+#cp -f ./NE10/Library/Modules/dsp/*.cpp ./build/arm7/sources
+#cp -f ./NE10/Library/Modules/dsp/*.h ./build/arm7/sources
+#cp -f ./NE10/Library/Modules/dsp/*.s ./build/arm7/sources
+#cp -f ./NE10/Library/Modules/math/*.c ./build/arm7/sources
+#cp -f ./NE10/Library/Modules/math/*.h ./build/arm7/sources
+#cp -f ./NE10/Library/Modules/math/*.s ./build/arm7/sources
+
+#mkdir -p ./build/arm64/sources
+#mkdir -p ./build/arm64/product
+
+#cp -f ./NE10/Library/Modules/*.c ./build/arm64/sources
+#cp -f ./NE10/Library/Common/*.c ./build/arm64/sources
+#cp -f ./NE10/Library/Common/*.h ./build/arm64/sources
+#cp -f ./NE10/Library/Modules/dsp/*.c ./build/arm64/sources
+#cp -f ./NE10/Library/Modules/dsp/*.cpp ./build/arm64/sources
+#cp -f ./NE10/Library/Modules/dsp/*.h ./build/arm64/sources
+#cp -f ./NE10/Library/Modules/math/*.c ./build/arm64/sources
+#cp -f ./NE10/Library/Modules/math/*.h ./build/arm64/sources
+
+mkdir -p ./build/simulator/sources
+mkdir -p ./build/simulator/product
+
+cp -f ./NE10/Library/Modules/*.c ./build/simulator/sources
+cp -f ./NE10/Library/Common/*.c ./build/simulator/sources
+cp -f ./NE10/Library/Common/*.h ./build/simulator/sources
+cp -f ./NE10/Library/Modules/dsp/*.c ./build/simulator/sources
+cp -f ./NE10/Library/Modules/dsp/*.cpp ./build/simulator/sources
+cp -f ./NE10/Library/Modules/dsp/*.h ./build/simulator/sources
+cp -f ./NE10/Library/Modules/math/*.c ./build/simulator/sources
+cp -f ./NE10/Library/Modules/math/*.h ./build/simulator/sources
+
+mkdir -p ./build/osx/sources
+mkdir -p ./build/osx/product
+
+cp -f ./NE10/Library/Modules/*.c ./build/osx/sources
+cp -f ./NE10/Library/Common/*.c ./build/osx/sources
+cp -f ./NE10/Library/Common/*.h ./build/osx/sources
+cp -f ./NE10/Library/Modules/dsp/*.c ./build/osx/sources
+cp -f ./NE10/Library/Modules/dsp/*.cpp ./build/osx/sources
+cp -f ./NE10/Library/Modules/dsp/*.h ./build/osx/sources
+cp -f ./NE10/Library/Modules/math/*.c ./build/osx/sources
+cp -f ./NE10/Library/Modules/math/*.h ./build/osx/sources
+
+mkdir -p ./build/all/
+

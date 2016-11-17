@@ -1,0 +1,807 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AE2D8AA1DD3B7B100423490 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8A91DD3B7B100423490 /* main.c */; };
+		1AE2D9031DD3BCCC00423490 /* NE10_mask_table.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8C51DD3BCCB00423490 /* NE10_mask_table.c */; };
+		1AE2D9041DD3BCCC00423490 /* NE10_fft.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8D31DD3BCCC00423490 /* NE10_fft.c */; };
+		1AE2D9051DD3BCCC00423490 /* NE10_fft_float32.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8D91DD3BCCC00423490 /* NE10_fft_float32.c */; };
+		1AE2D9061DD3BCCC00423490 /* NE10_fft_generic_float32.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8DA1DD3BCCC00423490 /* NE10_fft_generic_float32.c */; };
+		1AE2D9071DD3BCCC00423490 /* NE10_fft_generic_int32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8DC1DD3BCCC00423490 /* NE10_fft_generic_int32.cpp */; };
+		1AE2D9081DD3BCCC00423490 /* NE10_fft_int16.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8DE1DD3BCCC00423490 /* NE10_fft_int16.c */; };
+		1AE2D9091DD3BCCC00423490 /* NE10_fft_int32.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8DF1DD3BCCC00423490 /* NE10_fft_int32.c */; };
+		1AE2D90A1DD3BCCC00423490 /* NE10_fir.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8E01DD3BCCC00423490 /* NE10_fir.c */; };
+		1AE2D90B1DD3BCCC00423490 /* NE10_fir_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8E11DD3BCCC00423490 /* NE10_fir_init.c */; };
+		1AE2D90C1DD3BCCC00423490 /* NE10_iir.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8E21DD3BCCC00423490 /* NE10_iir.c */; };
+		1AE2D90D1DD3BCCC00423490 /* NE10_iir_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8E31DD3BCCC00423490 /* NE10_iir_init.c */; };
+		1AE2D90E1DD3BCCC00423490 /* NE10_init_dsp.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8E41DD3BCCC00423490 /* NE10_init_dsp.c */; };
+		1AE2D90F1DD3BCCC00423490 /* NE10_rfft_float32.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8E51DD3BCCC00423490 /* NE10_rfft_float32.c */; };
+		1AE2D9101DD3BCCC00423490 /* NE10_abs.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8E71DD3BCCC00423490 /* NE10_abs.c */; };
+		1AE2D9111DD3BCCC00423490 /* NE10_add.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8E81DD3BCCC00423490 /* NE10_add.c */; };
+		1AE2D9121DD3BCCC00423490 /* NE10_addc.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8E91DD3BCCC00423490 /* NE10_addc.c */; };
+		1AE2D9131DD3BCCC00423490 /* NE10_addmat.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8EA1DD3BCCC00423490 /* NE10_addmat.c */; };
+		1AE2D9141DD3BCCC00423490 /* NE10_cross.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8EB1DD3BCCC00423490 /* NE10_cross.c */; };
+		1AE2D9151DD3BCCC00423490 /* NE10_detmat.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8EC1DD3BCCC00423490 /* NE10_detmat.c */; };
+		1AE2D9161DD3BCCC00423490 /* NE10_div.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8EE1DD3BCCC00423490 /* NE10_div.c */; };
+		1AE2D9171DD3BCCC00423490 /* NE10_divc.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8EF1DD3BCCC00423490 /* NE10_divc.c */; };
+		1AE2D9181DD3BCCC00423490 /* NE10_dot.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8F01DD3BCCC00423490 /* NE10_dot.c */; };
+		1AE2D9191DD3BCCC00423490 /* NE10_identitymat.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8F11DD3BCCC00423490 /* NE10_identitymat.c */; };
+		1AE2D91A1DD3BCCC00423490 /* NE10_init_math.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8F21DD3BCCC00423490 /* NE10_init_math.c */; };
+		1AE2D91B1DD3BCCC00423490 /* NE10_invmat.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8F31DD3BCCC00423490 /* NE10_invmat.c */; };
+		1AE2D91C1DD3BCCC00423490 /* NE10_len.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8F41DD3BCCC00423490 /* NE10_len.c */; };
+		1AE2D91D1DD3BCCC00423490 /* NE10_mla.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8F51DD3BCCC00423490 /* NE10_mla.c */; };
+		1AE2D91E1DD3BCCC00423490 /* NE10_mlac.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8F61DD3BCCC00423490 /* NE10_mlac.c */; };
+		1AE2D91F1DD3BCCC00423490 /* NE10_mul.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8F71DD3BCCC00423490 /* NE10_mul.c */; };
+		1AE2D9201DD3BCCC00423490 /* NE10_mulc.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8F81DD3BCCC00423490 /* NE10_mulc.c */; };
+		1AE2D9211DD3BCCC00423490 /* NE10_mulcmatvec.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8F91DD3BCCC00423490 /* NE10_mulcmatvec.c */; };
+		1AE2D9221DD3BCCC00423490 /* NE10_mulmat.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8FA1DD3BCCC00423490 /* NE10_mulmat.c */; };
+		1AE2D9231DD3BCCC00423490 /* NE10_normalize.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8FB1DD3BCCC00423490 /* NE10_normalize.c */; };
+		1AE2D9241DD3BCCC00423490 /* NE10_rsbc.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8FC1DD3BCCC00423490 /* NE10_rsbc.c */; };
+		1AE2D9251DD3BCCC00423490 /* NE10_setc.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8FD1DD3BCCC00423490 /* NE10_setc.c */; };
+		1AE2D9261DD3BCCC00423490 /* NE10_sub.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8FE1DD3BCCC00423490 /* NE10_sub.c */; };
+		1AE2D9271DD3BCCC00423490 /* NE10_subc.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D8FF1DD3BCCC00423490 /* NE10_subc.c */; };
+		1AE2D9281DD3BCCC00423490 /* NE10_submat.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9001DD3BCCC00423490 /* NE10_submat.c */; };
+		1AE2D9291DD3BCCC00423490 /* NE10_transmat.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9011DD3BCCC00423490 /* NE10_transmat.c */; };
+		1AE2D92A1DD3BCCC00423490 /* NE10_init.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9021DD3BCCC00423490 /* NE10_init.c */; };
+		1AE2D9551DDA67F700423490 /* NE10_fft_float32.neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9521DDA67F700423490 /* NE10_fft_float32.neon.c */; };
+		1AE2D9561DDA67F700423490 /* NE10_fft_int16.neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9531DDA67F700423490 /* NE10_fft_int16.neon.c */; };
+		1AE2D9571DDA67F700423490 /* NE10_fft_int32.neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9541DDA67F700423490 /* NE10_fft_int32.neon.c */; };
+		1AE2D9601DDA771F00423490 /* NE10_addc.neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9581DDA771F00423490 /* NE10_addc.neon.c */; };
+		1AE2D9611DDA771F00423490 /* NE10_addmat.neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9591DDA771F00423490 /* NE10_addmat.neon.c */; };
+		1AE2D9621DDA771F00423490 /* NE10_divc.neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D95A1DDA771F00423490 /* NE10_divc.neon.c */; };
+		1AE2D9631DDA771F00423490 /* NE10_mlac.neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D95B1DDA771F00423490 /* NE10_mlac.neon.c */; };
+		1AE2D9641DDA771F00423490 /* NE10_mulc.neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D95C1DDA771F00423490 /* NE10_mulc.neon.c */; };
+		1AE2D9651DDA771F00423490 /* NE10_rsbc.neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D95D1DDA771F00423490 /* NE10_rsbc.neon.c */; };
+		1AE2D9661DDA771F00423490 /* NE10_subc.neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D95E1DDA771F00423490 /* NE10_subc.neon.c */; };
+		1AE2D9671DDA771F00423490 /* NE10_submat.neon.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D95F1DDA771F00423490 /* NE10_submat.neon.c */; };
+		1AE2D9691DDAE2CE00423490 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9681DDAE2CE00423490 /* Makefile */; };
+		1AE2D9811DDE08B900423490 /* NE10_fft_float32.neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9731DDE08B900423490 /* NE10_fft_float32.neon.s */; };
+		1AE2D9821DDE08B900423490 /* NE10_fft_float32.neonintrinsic.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9741DDE08B900423490 /* NE10_fft_float32.neonintrinsic.c */; };
+		1AE2D9831DDE08B900423490 /* NE10_fft_float32.neonv8.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9751DDE08B900423490 /* NE10_fft_float32.neonv8.s */; };
+		1AE2D9841DDE08B900423490 /* NE10_fft_generic_float32.neonintrinsic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9761DDE08B900423490 /* NE10_fft_generic_float32.neonintrinsic.cpp */; };
+		1AE2D9851DDE08B900423490 /* NE10_fft_generic_int32.neonintrinsic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9771DDE08B900423490 /* NE10_fft_generic_int32.neonintrinsic.cpp */; };
+		1AE2D9861DDE08B900423490 /* NE10_fft_int16.neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9791DDE08B900423490 /* NE10_fft_int16.neon.s */; };
+		1AE2D9871DDE08B900423490 /* NE10_fft_int16.neonintrinsic.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D97A1DDE08B900423490 /* NE10_fft_int16.neonintrinsic.c */; };
+		1AE2D9881DDE08B900423490 /* NE10_fft_int32.neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D97B1DDE08B900423490 /* NE10_fft_int32.neon.s */; };
+		1AE2D9891DDE08B900423490 /* NE10_fft_int32.neonintrinsic.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D97C1DDE08B900423490 /* NE10_fft_int32.neonintrinsic.c */; };
+		1AE2D98A1DDE08B900423490 /* NE10_fir.neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D97E1DDE08B900423490 /* NE10_fir.neon.s */; };
+		1AE2D98B1DDE08B900423490 /* NE10_iir.neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D97F1DDE08B900423490 /* NE10_iir.neon.s */; };
+		1AE2D98C1DDE08B900423490 /* NE10_rfft_float32.neonintrinsic.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9801DDE08B900423490 /* NE10_rfft_float32.neonintrinsic.c */; };
+		1AE2D9B71DDE08C200423490 /* NE10_abs.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D98D1DDE08C200423490 /* NE10_abs.asm.s */; };
+		1AE2D9B81DDE08C200423490 /* NE10_abs.neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D98E1DDE08C200423490 /* NE10_abs.neon.s */; };
+		1AE2D9B91DDE08C200423490 /* NE10_add.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D98F1DDE08C200423490 /* NE10_add.asm.s */; };
+		1AE2D9BA1DDE08C200423490 /* NE10_add.neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9901DDE08C200423490 /* NE10_add.neon.s */; };
+		1AE2D9BB1DDE08C200423490 /* NE10_addc.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9911DDE08C200423490 /* NE10_addc.asm.s */; };
+		1AE2D9BC1DDE08C200423490 /* NE10_addmat.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9921DDE08C200423490 /* NE10_addmat.asm.s */; };
+		1AE2D9BD1DDE08C200423490 /* NE10_cross.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9931DDE08C200423490 /* NE10_cross.asm.s */; };
+		1AE2D9BE1DDE08C200423490 /* NE10_cross.neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9941DDE08C200423490 /* NE10_cross.neon.s */; };
+		1AE2D9BF1DDE08C200423490 /* NE10_detmat.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9951DDE08C200423490 /* NE10_detmat.asm.s */; };
+		1AE2D9C01DDE08C200423490 /* NE10_detmat.neon.inc.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9961DDE08C200423490 /* NE10_detmat.neon.inc.s */; };
+		1AE2D9C11DDE08C200423490 /* NE10_detmat.neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9971DDE08C200423490 /* NE10_detmat.neon.s */; };
+		1AE2D9C21DDE08C200423490 /* NE10_div.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9981DDE08C200423490 /* NE10_div.asm.s */; };
+		1AE2D9C31DDE08C200423490 /* NE10_div.neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9991DDE08C200423490 /* NE10_div.neon.s */; };
+		1AE2D9C41DDE08C200423490 /* NE10_divc.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D99A1DDE08C200423490 /* NE10_divc.asm.s */; };
+		1AE2D9C51DDE08C200423490 /* NE10_dot.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D99B1DDE08C200423490 /* NE10_dot.asm.s */; };
+		1AE2D9C61DDE08C200423490 /* NE10_dot.neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D99C1DDE08C200423490 /* NE10_dot.neon.s */; };
+		1AE2D9C71DDE08C200423490 /* NE10_identitymat.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D99D1DDE08C200423490 /* NE10_identitymat.asm.s */; };
+		1AE2D9C81DDE08C200423490 /* NE10_identitymat.neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D99E1DDE08C200423490 /* NE10_identitymat.neon.s */; };
+		1AE2D9C91DDE08C200423490 /* NE10_invmat.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D99F1DDE08C200423490 /* NE10_invmat.asm.s */; };
+		1AE2D9CA1DDE08C200423490 /* NE10_invmat.neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9A01DDE08C200423490 /* NE10_invmat.neon.s */; };
+		1AE2D9CB1DDE08C200423490 /* NE10_len.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9A11DDE08C200423490 /* NE10_len.asm.s */; };
+		1AE2D9CC1DDE08C200423490 /* NE10_len.neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9A21DDE08C200423490 /* NE10_len.neon.s */; };
+		1AE2D9CD1DDE08C200423490 /* NE10_mla.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9A31DDE08C200423490 /* NE10_mla.asm.s */; };
+		1AE2D9CE1DDE08C200423490 /* NE10_mla.neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9A41DDE08C200423490 /* NE10_mla.neon.s */; };
+		1AE2D9CF1DDE08C200423490 /* NE10_mlac.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9A51DDE08C200423490 /* NE10_mlac.asm.s */; };
+		1AE2D9D01DDE08C200423490 /* NE10_mul.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9A61DDE08C200423490 /* NE10_mul.asm.s */; };
+		1AE2D9D11DDE08C200423490 /* NE10_mul.neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9A71DDE08C200423490 /* NE10_mul.neon.s */; };
+		1AE2D9D21DDE08C200423490 /* NE10_mulc.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9A81DDE08C200423490 /* NE10_mulc.asm.s */; };
+		1AE2D9D31DDE08C200423490 /* NE10_mulcmatvec.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9A91DDE08C200423490 /* NE10_mulcmatvec.asm.s */; };
+		1AE2D9D41DDE08C200423490 /* NE10_mulcmatvec.neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9AA1DDE08C200423490 /* NE10_mulcmatvec.neon.s */; };
+		1AE2D9D51DDE08C200423490 /* NE10_mulmat.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9AB1DDE08C200423490 /* NE10_mulmat.asm.s */; };
+		1AE2D9D61DDE08C200423490 /* NE10_mulmat.neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9AC1DDE08C200423490 /* NE10_mulmat.neon.s */; };
+		1AE2D9D71DDE08C200423490 /* NE10_normalize.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9AD1DDE08C200423490 /* NE10_normalize.asm.s */; };
+		1AE2D9D81DDE08C200423490 /* NE10_normalize.neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9AE1DDE08C200423490 /* NE10_normalize.neon.s */; };
+		1AE2D9D91DDE08C200423490 /* NE10_rsbc.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9AF1DDE08C200423490 /* NE10_rsbc.asm.s */; };
+		1AE2D9DA1DDE08C200423490 /* NE10_setc.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9B01DDE08C200423490 /* NE10_setc.asm.s */; };
+		1AE2D9DB1DDE08C200423490 /* NE10_sub.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9B11DDE08C200423490 /* NE10_sub.asm.s */; };
+		1AE2D9DC1DDE08C200423490 /* NE10_sub.neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9B21DDE08C200423490 /* NE10_sub.neon.s */; };
+		1AE2D9DD1DDE08C200423490 /* NE10_subc.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9B31DDE08C200423490 /* NE10_subc.asm.s */; };
+		1AE2D9DE1DDE08C200423490 /* NE10_submat.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9B41DDE08C200423490 /* NE10_submat.asm.s */; };
+		1AE2D9DF1DDE08C200423490 /* NE10_transmat.asm.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9B51DDE08C200423490 /* NE10_transmat.asm.s */; };
+		1AE2D9E01DDE08C200423490 /* NE10_transmat.neon.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9B61DDE08C200423490 /* NE10_transmat.neon.s */; };
+		1AE2D9E21DDE08F900423490 /* versionheader.s in Sources */ = {isa = PBXBuildFile; fileRef = 1AE2D9E11DDE08F900423490 /* versionheader.s */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1AE2D8A41DD3B7B100423490 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1AE2D8A61DD3B7B100423490 /* NE10 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NE10; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AE2D8A91DD3B7B100423490 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		1AE2D8C31DD3BCCB00423490 /* factor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = factor.h; sourceTree = "<group>"; };
+		1AE2D8C41DD3BCCB00423490 /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
+		1AE2D8C51DD3BCCB00423490 /* NE10_mask_table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_mask_table.c; sourceTree = "<group>"; };
+		1AE2D8C61DD3BCCB00423490 /* NE10_mask_table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NE10_mask_table.h; sourceTree = "<group>"; };
+		1AE2D8C71DD3BCCC00423490 /* versionheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = versionheader.h; sourceTree = "<group>"; };
+		1AE2D8D31DD3BCCC00423490 /* NE10_fft.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_fft.c; sourceTree = "<group>"; };
+		1AE2D8D41DD3BCCC00423490 /* NE10_fft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NE10_fft.h; sourceTree = "<group>"; };
+		1AE2D8D51DD3BCCC00423490 /* NE10_fft_bfly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NE10_fft_bfly.h; sourceTree = "<group>"; };
+		1AE2D8D61DD3BCCC00423490 /* NE10_fft_common_varibles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NE10_fft_common_varibles.h; sourceTree = "<group>"; };
+		1AE2D8D71DD3BCCC00423490 /* NE10_fft_cplx_ops.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NE10_fft_cplx_ops.h; sourceTree = "<group>"; };
+		1AE2D8D81DD3BCCC00423490 /* NE10_fft_debug_macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NE10_fft_debug_macro.h; sourceTree = "<group>"; };
+		1AE2D8D91DD3BCCC00423490 /* NE10_fft_float32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_fft_float32.c; sourceTree = "<group>"; };
+		1AE2D8DA1DD3BCCC00423490 /* NE10_fft_generic_float32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_fft_generic_float32.c; sourceTree = "<group>"; };
+		1AE2D8DB1DD3BCCC00423490 /* NE10_fft_generic_float32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NE10_fft_generic_float32.h; sourceTree = "<group>"; };
+		1AE2D8DC1DD3BCCC00423490 /* NE10_fft_generic_int32.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NE10_fft_generic_int32.cpp; sourceTree = "<group>"; };
+		1AE2D8DD1DD3BCCC00423490 /* NE10_fft_generic_int32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NE10_fft_generic_int32.h; sourceTree = "<group>"; };
+		1AE2D8DE1DD3BCCC00423490 /* NE10_fft_int16.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_fft_int16.c; sourceTree = "<group>"; };
+		1AE2D8DF1DD3BCCC00423490 /* NE10_fft_int32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_fft_int32.c; sourceTree = "<group>"; };
+		1AE2D8E01DD3BCCC00423490 /* NE10_fir.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_fir.c; sourceTree = "<group>"; };
+		1AE2D8E11DD3BCCC00423490 /* NE10_fir_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_fir_init.c; sourceTree = "<group>"; };
+		1AE2D8E21DD3BCCC00423490 /* NE10_iir.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_iir.c; sourceTree = "<group>"; };
+		1AE2D8E31DD3BCCC00423490 /* NE10_iir_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_iir_init.c; sourceTree = "<group>"; };
+		1AE2D8E41DD3BCCC00423490 /* NE10_init_dsp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_init_dsp.c; sourceTree = "<group>"; };
+		1AE2D8E51DD3BCCC00423490 /* NE10_rfft_float32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_rfft_float32.c; sourceTree = "<group>"; };
+		1AE2D8E71DD3BCCC00423490 /* NE10_abs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_abs.c; sourceTree = "<group>"; };
+		1AE2D8E81DD3BCCC00423490 /* NE10_add.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_add.c; sourceTree = "<group>"; };
+		1AE2D8E91DD3BCCC00423490 /* NE10_addc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_addc.c; sourceTree = "<group>"; };
+		1AE2D8EA1DD3BCCC00423490 /* NE10_addmat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_addmat.c; sourceTree = "<group>"; };
+		1AE2D8EB1DD3BCCC00423490 /* NE10_cross.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_cross.c; sourceTree = "<group>"; };
+		1AE2D8EC1DD3BCCC00423490 /* NE10_detmat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_detmat.c; sourceTree = "<group>"; };
+		1AE2D8ED1DD3BCCC00423490 /* NE10_detmat.c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NE10_detmat.c.h; sourceTree = "<group>"; };
+		1AE2D8EE1DD3BCCC00423490 /* NE10_div.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_div.c; sourceTree = "<group>"; };
+		1AE2D8EF1DD3BCCC00423490 /* NE10_divc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_divc.c; sourceTree = "<group>"; };
+		1AE2D8F01DD3BCCC00423490 /* NE10_dot.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_dot.c; sourceTree = "<group>"; };
+		1AE2D8F11DD3BCCC00423490 /* NE10_identitymat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_identitymat.c; sourceTree = "<group>"; };
+		1AE2D8F21DD3BCCC00423490 /* NE10_init_math.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_init_math.c; sourceTree = "<group>"; };
+		1AE2D8F31DD3BCCC00423490 /* NE10_invmat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_invmat.c; sourceTree = "<group>"; };
+		1AE2D8F41DD3BCCC00423490 /* NE10_len.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_len.c; sourceTree = "<group>"; };
+		1AE2D8F51DD3BCCC00423490 /* NE10_mla.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_mla.c; sourceTree = "<group>"; };
+		1AE2D8F61DD3BCCC00423490 /* NE10_mlac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_mlac.c; sourceTree = "<group>"; };
+		1AE2D8F71DD3BCCC00423490 /* NE10_mul.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_mul.c; sourceTree = "<group>"; };
+		1AE2D8F81DD3BCCC00423490 /* NE10_mulc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_mulc.c; sourceTree = "<group>"; };
+		1AE2D8F91DD3BCCC00423490 /* NE10_mulcmatvec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_mulcmatvec.c; sourceTree = "<group>"; };
+		1AE2D8FA1DD3BCCC00423490 /* NE10_mulmat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_mulmat.c; sourceTree = "<group>"; };
+		1AE2D8FB1DD3BCCC00423490 /* NE10_normalize.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_normalize.c; sourceTree = "<group>"; };
+		1AE2D8FC1DD3BCCC00423490 /* NE10_rsbc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_rsbc.c; sourceTree = "<group>"; };
+		1AE2D8FD1DD3BCCC00423490 /* NE10_setc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_setc.c; sourceTree = "<group>"; };
+		1AE2D8FE1DD3BCCC00423490 /* NE10_sub.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_sub.c; sourceTree = "<group>"; };
+		1AE2D8FF1DD3BCCC00423490 /* NE10_subc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_subc.c; sourceTree = "<group>"; };
+		1AE2D9001DD3BCCC00423490 /* NE10_submat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_submat.c; sourceTree = "<group>"; };
+		1AE2D9011DD3BCCC00423490 /* NE10_transmat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_transmat.c; sourceTree = "<group>"; };
+		1AE2D9021DD3BCCC00423490 /* NE10_init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_init.c; sourceTree = "<group>"; };
+		1AE2D94D1DDA4EFD00423490 /* NE10_macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NE10_macros.h; sourceTree = "<group>"; };
+		1AE2D9521DDA67F700423490 /* NE10_fft_float32.neon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_fft_float32.neon.c; sourceTree = "<group>"; };
+		1AE2D9531DDA67F700423490 /* NE10_fft_int16.neon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_fft_int16.neon.c; sourceTree = "<group>"; };
+		1AE2D9541DDA67F700423490 /* NE10_fft_int32.neon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_fft_int32.neon.c; sourceTree = "<group>"; };
+		1AE2D9581DDA771F00423490 /* NE10_addc.neon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_addc.neon.c; sourceTree = "<group>"; };
+		1AE2D9591DDA771F00423490 /* NE10_addmat.neon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_addmat.neon.c; sourceTree = "<group>"; };
+		1AE2D95A1DDA771F00423490 /* NE10_divc.neon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_divc.neon.c; sourceTree = "<group>"; };
+		1AE2D95B1DDA771F00423490 /* NE10_mlac.neon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_mlac.neon.c; sourceTree = "<group>"; };
+		1AE2D95C1DDA771F00423490 /* NE10_mulc.neon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_mulc.neon.c; sourceTree = "<group>"; };
+		1AE2D95D1DDA771F00423490 /* NE10_rsbc.neon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_rsbc.neon.c; sourceTree = "<group>"; };
+		1AE2D95E1DDA771F00423490 /* NE10_subc.neon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_subc.neon.c; sourceTree = "<group>"; };
+		1AE2D95F1DDA771F00423490 /* NE10_submat.neon.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_submat.neon.c; sourceTree = "<group>"; };
+		1AE2D9681DDAE2CE00423490 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		1AE2D96A1DDAF2E300423490 /* configure */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = configure; sourceTree = "<group>"; };
+		1AE2D96C1DDAF6BC00423490 /* NE10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NE10.h; sourceTree = "<group>"; };
+		1AE2D96D1DDAF6BC00423490 /* NE10_dsp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NE10_dsp.h; sourceTree = "<group>"; };
+		1AE2D96E1DDAF6BC00423490 /* NE10_imgproc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NE10_imgproc.h; sourceTree = "<group>"; };
+		1AE2D96F1DDAF6BC00423490 /* NE10_init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NE10_init.h; sourceTree = "<group>"; };
+		1AE2D9701DDAF6BC00423490 /* NE10_math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NE10_math.h; sourceTree = "<group>"; };
+		1AE2D9711DDAF6BC00423490 /* NE10_physics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NE10_physics.h; sourceTree = "<group>"; };
+		1AE2D9721DDAF6BC00423490 /* NE10_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NE10_types.h; sourceTree = "<group>"; };
+		1AE2D9731DDE08B900423490 /* NE10_fft_float32.neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_fft_float32.neon.s; sourceTree = "<group>"; };
+		1AE2D9741DDE08B900423490 /* NE10_fft_float32.neonintrinsic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_fft_float32.neonintrinsic.c; sourceTree = "<group>"; };
+		1AE2D9751DDE08B900423490 /* NE10_fft_float32.neonv8.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_fft_float32.neonv8.s; sourceTree = "<group>"; };
+		1AE2D9761DDE08B900423490 /* NE10_fft_generic_float32.neonintrinsic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NE10_fft_generic_float32.neonintrinsic.cpp; sourceTree = "<group>"; };
+		1AE2D9771DDE08B900423490 /* NE10_fft_generic_int32.neonintrinsic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NE10_fft_generic_int32.neonintrinsic.cpp; sourceTree = "<group>"; };
+		1AE2D9781DDE08B900423490 /* NE10_fft_generic_int32.neonintrinsic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NE10_fft_generic_int32.neonintrinsic.h; sourceTree = "<group>"; };
+		1AE2D9791DDE08B900423490 /* NE10_fft_int16.neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_fft_int16.neon.s; sourceTree = "<group>"; };
+		1AE2D97A1DDE08B900423490 /* NE10_fft_int16.neonintrinsic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_fft_int16.neonintrinsic.c; sourceTree = "<group>"; };
+		1AE2D97B1DDE08B900423490 /* NE10_fft_int32.neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_fft_int32.neon.s; sourceTree = "<group>"; };
+		1AE2D97C1DDE08B900423490 /* NE10_fft_int32.neonintrinsic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_fft_int32.neonintrinsic.c; sourceTree = "<group>"; };
+		1AE2D97D1DDE08B900423490 /* NE10_fft.neonintrinsic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NE10_fft.neonintrinsic.h; sourceTree = "<group>"; };
+		1AE2D97E1DDE08B900423490 /* NE10_fir.neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_fir.neon.s; sourceTree = "<group>"; };
+		1AE2D97F1DDE08B900423490 /* NE10_iir.neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_iir.neon.s; sourceTree = "<group>"; };
+		1AE2D9801DDE08B900423490 /* NE10_rfft_float32.neonintrinsic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NE10_rfft_float32.neonintrinsic.c; sourceTree = "<group>"; };
+		1AE2D98D1DDE08C200423490 /* NE10_abs.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_abs.asm.s; sourceTree = "<group>"; };
+		1AE2D98E1DDE08C200423490 /* NE10_abs.neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_abs.neon.s; sourceTree = "<group>"; };
+		1AE2D98F1DDE08C200423490 /* NE10_add.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_add.asm.s; sourceTree = "<group>"; };
+		1AE2D9901DDE08C200423490 /* NE10_add.neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_add.neon.s; sourceTree = "<group>"; };
+		1AE2D9911DDE08C200423490 /* NE10_addc.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_addc.asm.s; sourceTree = "<group>"; };
+		1AE2D9921DDE08C200423490 /* NE10_addmat.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_addmat.asm.s; sourceTree = "<group>"; };
+		1AE2D9931DDE08C200423490 /* NE10_cross.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_cross.asm.s; sourceTree = "<group>"; };
+		1AE2D9941DDE08C200423490 /* NE10_cross.neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_cross.neon.s; sourceTree = "<group>"; };
+		1AE2D9951DDE08C200423490 /* NE10_detmat.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_detmat.asm.s; sourceTree = "<group>"; };
+		1AE2D9961DDE08C200423490 /* NE10_detmat.neon.inc.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_detmat.neon.inc.s; sourceTree = "<group>"; };
+		1AE2D9971DDE08C200423490 /* NE10_detmat.neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_detmat.neon.s; sourceTree = "<group>"; };
+		1AE2D9981DDE08C200423490 /* NE10_div.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_div.asm.s; sourceTree = "<group>"; };
+		1AE2D9991DDE08C200423490 /* NE10_div.neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_div.neon.s; sourceTree = "<group>"; };
+		1AE2D99A1DDE08C200423490 /* NE10_divc.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_divc.asm.s; sourceTree = "<group>"; };
+		1AE2D99B1DDE08C200423490 /* NE10_dot.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_dot.asm.s; sourceTree = "<group>"; };
+		1AE2D99C1DDE08C200423490 /* NE10_dot.neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_dot.neon.s; sourceTree = "<group>"; };
+		1AE2D99D1DDE08C200423490 /* NE10_identitymat.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_identitymat.asm.s; sourceTree = "<group>"; };
+		1AE2D99E1DDE08C200423490 /* NE10_identitymat.neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_identitymat.neon.s; sourceTree = "<group>"; };
+		1AE2D99F1DDE08C200423490 /* NE10_invmat.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_invmat.asm.s; sourceTree = "<group>"; };
+		1AE2D9A01DDE08C200423490 /* NE10_invmat.neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_invmat.neon.s; sourceTree = "<group>"; };
+		1AE2D9A11DDE08C200423490 /* NE10_len.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_len.asm.s; sourceTree = "<group>"; };
+		1AE2D9A21DDE08C200423490 /* NE10_len.neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_len.neon.s; sourceTree = "<group>"; };
+		1AE2D9A31DDE08C200423490 /* NE10_mla.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_mla.asm.s; sourceTree = "<group>"; };
+		1AE2D9A41DDE08C200423490 /* NE10_mla.neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_mla.neon.s; sourceTree = "<group>"; };
+		1AE2D9A51DDE08C200423490 /* NE10_mlac.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_mlac.asm.s; sourceTree = "<group>"; };
+		1AE2D9A61DDE08C200423490 /* NE10_mul.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_mul.asm.s; sourceTree = "<group>"; };
+		1AE2D9A71DDE08C200423490 /* NE10_mul.neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_mul.neon.s; sourceTree = "<group>"; };
+		1AE2D9A81DDE08C200423490 /* NE10_mulc.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_mulc.asm.s; sourceTree = "<group>"; };
+		1AE2D9A91DDE08C200423490 /* NE10_mulcmatvec.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_mulcmatvec.asm.s; sourceTree = "<group>"; };
+		1AE2D9AA1DDE08C200423490 /* NE10_mulcmatvec.neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_mulcmatvec.neon.s; sourceTree = "<group>"; };
+		1AE2D9AB1DDE08C200423490 /* NE10_mulmat.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_mulmat.asm.s; sourceTree = "<group>"; };
+		1AE2D9AC1DDE08C200423490 /* NE10_mulmat.neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_mulmat.neon.s; sourceTree = "<group>"; };
+		1AE2D9AD1DDE08C200423490 /* NE10_normalize.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_normalize.asm.s; sourceTree = "<group>"; };
+		1AE2D9AE1DDE08C200423490 /* NE10_normalize.neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_normalize.neon.s; sourceTree = "<group>"; };
+		1AE2D9AF1DDE08C200423490 /* NE10_rsbc.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_rsbc.asm.s; sourceTree = "<group>"; };
+		1AE2D9B01DDE08C200423490 /* NE10_setc.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_setc.asm.s; sourceTree = "<group>"; };
+		1AE2D9B11DDE08C200423490 /* NE10_sub.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_sub.asm.s; sourceTree = "<group>"; };
+		1AE2D9B21DDE08C200423490 /* NE10_sub.neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_sub.neon.s; sourceTree = "<group>"; };
+		1AE2D9B31DDE08C200423490 /* NE10_subc.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_subc.asm.s; sourceTree = "<group>"; };
+		1AE2D9B41DDE08C200423490 /* NE10_submat.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_submat.asm.s; sourceTree = "<group>"; };
+		1AE2D9B51DDE08C200423490 /* NE10_transmat.asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_transmat.asm.s; sourceTree = "<group>"; };
+		1AE2D9B61DDE08C200423490 /* NE10_transmat.neon.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = NE10_transmat.neon.s; sourceTree = "<group>"; };
+		1AE2D9E11DDE08F900423490 /* versionheader.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = versionheader.s; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1AE2D8A31DD3B7B100423490 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AE2D89D1DD3B7B100423490 = {
+			isa = PBXGroup;
+			children = (
+				1AE2D96A1DDAF2E300423490 /* configure */,
+				1AE2D9681DDAE2CE00423490 /* Makefile */,
+				1AE2D8A81DD3B7B100423490 /* NE10 */,
+				1AE2D8A71DD3B7B100423490 /* Products */,
+				1AE2D93C1DD67EC600423490 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1AE2D8A71DD3B7B100423490 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1AE2D8A61DD3B7B100423490 /* NE10 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1AE2D8A81DD3B7B100423490 /* NE10 */ = {
+			isa = PBXGroup;
+			children = (
+				1AE2D8C11DD3BCCB00423490 /* Library */,
+				1AE2D8A91DD3B7B100423490 /* main.c */,
+			);
+			path = NE10;
+			sourceTree = "<group>";
+		};
+		1AE2D8C11DD3BCCB00423490 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				1AE2D96B1DDAF6BC00423490 /* headers */,
+				1AE2D8C21DD3BCCB00423490 /* Common */,
+				1AE2D8D11DD3BCCC00423490 /* Modules */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		1AE2D8C21DD3BCCB00423490 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1AE2D94D1DDA4EFD00423490 /* NE10_macros.h */,
+				1AE2D8C31DD3BCCB00423490 /* factor.h */,
+				1AE2D8C41DD3BCCB00423490 /* macros.h */,
+				1AE2D8C51DD3BCCB00423490 /* NE10_mask_table.c */,
+				1AE2D8C61DD3BCCB00423490 /* NE10_mask_table.h */,
+				1AE2D8C71DD3BCCC00423490 /* versionheader.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1AE2D8D11DD3BCCC00423490 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1AE2D8D21DD3BCCC00423490 /* dsp */,
+				1AE2D8E61DD3BCCC00423490 /* math */,
+				1AE2D9021DD3BCCC00423490 /* NE10_init.c */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1AE2D8D21DD3BCCC00423490 /* dsp */ = {
+			isa = PBXGroup;
+			children = (
+				1AE2D9731DDE08B900423490 /* NE10_fft_float32.neon.s */,
+				1AE2D9741DDE08B900423490 /* NE10_fft_float32.neonintrinsic.c */,
+				1AE2D9751DDE08B900423490 /* NE10_fft_float32.neonv8.s */,
+				1AE2D9761DDE08B900423490 /* NE10_fft_generic_float32.neonintrinsic.cpp */,
+				1AE2D9771DDE08B900423490 /* NE10_fft_generic_int32.neonintrinsic.cpp */,
+				1AE2D9781DDE08B900423490 /* NE10_fft_generic_int32.neonintrinsic.h */,
+				1AE2D9791DDE08B900423490 /* NE10_fft_int16.neon.s */,
+				1AE2D97A1DDE08B900423490 /* NE10_fft_int16.neonintrinsic.c */,
+				1AE2D97B1DDE08B900423490 /* NE10_fft_int32.neon.s */,
+				1AE2D97C1DDE08B900423490 /* NE10_fft_int32.neonintrinsic.c */,
+				1AE2D97D1DDE08B900423490 /* NE10_fft.neonintrinsic.h */,
+				1AE2D97E1DDE08B900423490 /* NE10_fir.neon.s */,
+				1AE2D97F1DDE08B900423490 /* NE10_iir.neon.s */,
+				1AE2D9801DDE08B900423490 /* NE10_rfft_float32.neonintrinsic.c */,
+				1AE2D9521DDA67F700423490 /* NE10_fft_float32.neon.c */,
+				1AE2D9531DDA67F700423490 /* NE10_fft_int16.neon.c */,
+				1AE2D9541DDA67F700423490 /* NE10_fft_int32.neon.c */,
+				1AE2D8D31DD3BCCC00423490 /* NE10_fft.c */,
+				1AE2D8D41DD3BCCC00423490 /* NE10_fft.h */,
+				1AE2D8D51DD3BCCC00423490 /* NE10_fft_bfly.h */,
+				1AE2D8D61DD3BCCC00423490 /* NE10_fft_common_varibles.h */,
+				1AE2D8D71DD3BCCC00423490 /* NE10_fft_cplx_ops.h */,
+				1AE2D8D81DD3BCCC00423490 /* NE10_fft_debug_macro.h */,
+				1AE2D8D91DD3BCCC00423490 /* NE10_fft_float32.c */,
+				1AE2D8DA1DD3BCCC00423490 /* NE10_fft_generic_float32.c */,
+				1AE2D8DB1DD3BCCC00423490 /* NE10_fft_generic_float32.h */,
+				1AE2D8DC1DD3BCCC00423490 /* NE10_fft_generic_int32.cpp */,
+				1AE2D8DD1DD3BCCC00423490 /* NE10_fft_generic_int32.h */,
+				1AE2D8DE1DD3BCCC00423490 /* NE10_fft_int16.c */,
+				1AE2D8DF1DD3BCCC00423490 /* NE10_fft_int32.c */,
+				1AE2D8E01DD3BCCC00423490 /* NE10_fir.c */,
+				1AE2D8E11DD3BCCC00423490 /* NE10_fir_init.c */,
+				1AE2D8E21DD3BCCC00423490 /* NE10_iir.c */,
+				1AE2D8E31DD3BCCC00423490 /* NE10_iir_init.c */,
+				1AE2D8E41DD3BCCC00423490 /* NE10_init_dsp.c */,
+				1AE2D8E51DD3BCCC00423490 /* NE10_rfft_float32.c */,
+			);
+			path = dsp;
+			sourceTree = "<group>";
+		};
+		1AE2D8E61DD3BCCC00423490 /* math */ = {
+			isa = PBXGroup;
+			children = (
+				1AE2D98D1DDE08C200423490 /* NE10_abs.asm.s */,
+				1AE2D98E1DDE08C200423490 /* NE10_abs.neon.s */,
+				1AE2D98F1DDE08C200423490 /* NE10_add.asm.s */,
+				1AE2D9901DDE08C200423490 /* NE10_add.neon.s */,
+				1AE2D9911DDE08C200423490 /* NE10_addc.asm.s */,
+				1AE2D9921DDE08C200423490 /* NE10_addmat.asm.s */,
+				1AE2D9931DDE08C200423490 /* NE10_cross.asm.s */,
+				1AE2D9941DDE08C200423490 /* NE10_cross.neon.s */,
+				1AE2D9951DDE08C200423490 /* NE10_detmat.asm.s */,
+				1AE2D9961DDE08C200423490 /* NE10_detmat.neon.inc.s */,
+				1AE2D9971DDE08C200423490 /* NE10_detmat.neon.s */,
+				1AE2D9981DDE08C200423490 /* NE10_div.asm.s */,
+				1AE2D9991DDE08C200423490 /* NE10_div.neon.s */,
+				1AE2D99A1DDE08C200423490 /* NE10_divc.asm.s */,
+				1AE2D99B1DDE08C200423490 /* NE10_dot.asm.s */,
+				1AE2D99C1DDE08C200423490 /* NE10_dot.neon.s */,
+				1AE2D99D1DDE08C200423490 /* NE10_identitymat.asm.s */,
+				1AE2D99E1DDE08C200423490 /* NE10_identitymat.neon.s */,
+				1AE2D99F1DDE08C200423490 /* NE10_invmat.asm.s */,
+				1AE2D9A01DDE08C200423490 /* NE10_invmat.neon.s */,
+				1AE2D9A11DDE08C200423490 /* NE10_len.asm.s */,
+				1AE2D9A21DDE08C200423490 /* NE10_len.neon.s */,
+				1AE2D9A31DDE08C200423490 /* NE10_mla.asm.s */,
+				1AE2D9A41DDE08C200423490 /* NE10_mla.neon.s */,
+				1AE2D9A51DDE08C200423490 /* NE10_mlac.asm.s */,
+				1AE2D9A61DDE08C200423490 /* NE10_mul.asm.s */,
+				1AE2D9A71DDE08C200423490 /* NE10_mul.neon.s */,
+				1AE2D9A81DDE08C200423490 /* NE10_mulc.asm.s */,
+				1AE2D9A91DDE08C200423490 /* NE10_mulcmatvec.asm.s */,
+				1AE2D9AA1DDE08C200423490 /* NE10_mulcmatvec.neon.s */,
+				1AE2D9AB1DDE08C200423490 /* NE10_mulmat.asm.s */,
+				1AE2D9AC1DDE08C200423490 /* NE10_mulmat.neon.s */,
+				1AE2D9AD1DDE08C200423490 /* NE10_normalize.asm.s */,
+				1AE2D9AE1DDE08C200423490 /* NE10_normalize.neon.s */,
+				1AE2D9AF1DDE08C200423490 /* NE10_rsbc.asm.s */,
+				1AE2D9B01DDE08C200423490 /* NE10_setc.asm.s */,
+				1AE2D9B11DDE08C200423490 /* NE10_sub.asm.s */,
+				1AE2D9B21DDE08C200423490 /* NE10_sub.neon.s */,
+				1AE2D9B31DDE08C200423490 /* NE10_subc.asm.s */,
+				1AE2D9B41DDE08C200423490 /* NE10_submat.asm.s */,
+				1AE2D9B51DDE08C200423490 /* NE10_transmat.asm.s */,
+				1AE2D9B61DDE08C200423490 /* NE10_transmat.neon.s */,
+				1AE2D9581DDA771F00423490 /* NE10_addc.neon.c */,
+				1AE2D9591DDA771F00423490 /* NE10_addmat.neon.c */,
+				1AE2D95A1DDA771F00423490 /* NE10_divc.neon.c */,
+				1AE2D95B1DDA771F00423490 /* NE10_mlac.neon.c */,
+				1AE2D95C1DDA771F00423490 /* NE10_mulc.neon.c */,
+				1AE2D95D1DDA771F00423490 /* NE10_rsbc.neon.c */,
+				1AE2D95E1DDA771F00423490 /* NE10_subc.neon.c */,
+				1AE2D95F1DDA771F00423490 /* NE10_submat.neon.c */,
+				1AE2D8E71DD3BCCC00423490 /* NE10_abs.c */,
+				1AE2D8E81DD3BCCC00423490 /* NE10_add.c */,
+				1AE2D8E91DD3BCCC00423490 /* NE10_addc.c */,
+				1AE2D8EA1DD3BCCC00423490 /* NE10_addmat.c */,
+				1AE2D8EB1DD3BCCC00423490 /* NE10_cross.c */,
+				1AE2D8EC1DD3BCCC00423490 /* NE10_detmat.c */,
+				1AE2D8ED1DD3BCCC00423490 /* NE10_detmat.c.h */,
+				1AE2D8EE1DD3BCCC00423490 /* NE10_div.c */,
+				1AE2D8EF1DD3BCCC00423490 /* NE10_divc.c */,
+				1AE2D8F01DD3BCCC00423490 /* NE10_dot.c */,
+				1AE2D8F11DD3BCCC00423490 /* NE10_identitymat.c */,
+				1AE2D8F21DD3BCCC00423490 /* NE10_init_math.c */,
+				1AE2D8F31DD3BCCC00423490 /* NE10_invmat.c */,
+				1AE2D8F41DD3BCCC00423490 /* NE10_len.c */,
+				1AE2D8F51DD3BCCC00423490 /* NE10_mla.c */,
+				1AE2D8F61DD3BCCC00423490 /* NE10_mlac.c */,
+				1AE2D8F71DD3BCCC00423490 /* NE10_mul.c */,
+				1AE2D8F81DD3BCCC00423490 /* NE10_mulc.c */,
+				1AE2D8F91DD3BCCC00423490 /* NE10_mulcmatvec.c */,
+				1AE2D8FA1DD3BCCC00423490 /* NE10_mulmat.c */,
+				1AE2D8FB1DD3BCCC00423490 /* NE10_normalize.c */,
+				1AE2D8FC1DD3BCCC00423490 /* NE10_rsbc.c */,
+				1AE2D8FD1DD3BCCC00423490 /* NE10_setc.c */,
+				1AE2D8FE1DD3BCCC00423490 /* NE10_sub.c */,
+				1AE2D8FF1DD3BCCC00423490 /* NE10_subc.c */,
+				1AE2D9001DD3BCCC00423490 /* NE10_submat.c */,
+				1AE2D9011DD3BCCC00423490 /* NE10_transmat.c */,
+			);
+			path = math;
+			sourceTree = "<group>";
+		};
+		1AE2D93C1DD67EC600423490 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1AE2D96B1DDAF6BC00423490 /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				1AE2D9E11DDE08F900423490 /* versionheader.s */,
+				1AE2D96C1DDAF6BC00423490 /* NE10.h */,
+				1AE2D96D1DDAF6BC00423490 /* NE10_dsp.h */,
+				1AE2D96E1DDAF6BC00423490 /* NE10_imgproc.h */,
+				1AE2D96F1DDAF6BC00423490 /* NE10_init.h */,
+				1AE2D9701DDAF6BC00423490 /* NE10_math.h */,
+				1AE2D9721DDAF6BC00423490 /* NE10_types.h */,
+				1AE2D9711DDAF6BC00423490 /* NE10_physics.h */,
+			);
+			path = headers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1AE2D8A51DD3B7B100423490 /* NE10 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AE2D8AD1DD3B7B100423490 /* Build configuration list for PBXNativeTarget "NE10" */;
+			buildPhases = (
+				1AE2D8A21DD3B7B100423490 /* Sources */,
+				1AE2D8A31DD3B7B100423490 /* Frameworks */,
+				1AE2D8A41DD3B7B100423490 /* CopyFiles */,
+				1AE2D92B1DD6540A00423490 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NE10;
+			productName = NE10;
+			productReference = 1AE2D8A61DD3B7B100423490 /* NE10 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1AE2D89E1DD3B7B100423490 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Ruben Perez";
+				TargetAttributes = {
+					1AE2D8A51DD3B7B100423490 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1AE2D8A11DD3B7B100423490 /* Build configuration list for PBXProject "NE10" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1AE2D89D1DD3B7B100423490;
+			productRefGroup = 1AE2D8A71DD3B7B100423490 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1AE2D8A51DD3B7B100423490 /* NE10 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AE2D92B1DD6540A00423490 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "env
+";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1AE2D8A21DD3B7B100423490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AE2D9061DD3BCCC00423490 /* NE10_fft_generic_float32.c in Sources */,
+				1AE2D9651DDA771F00423490 /* NE10_rsbc.neon.c in Sources */,
+				1AE2D9641DDA771F00423490 /* NE10_mulc.neon.c in Sources */,
+				1AE2D9C71DDE08C200423490 /* NE10_identitymat.asm.s in Sources */,
+				1AE2D9D51DDE08C200423490 /* NE10_mulmat.asm.s in Sources */,
+				1AE2D9161DD3BCCC00423490 /* NE10_div.c in Sources */,
+				1AE2D9861DDE08B900423490 /* NE10_fft_int16.neon.s in Sources */,
+				1AE2D9BD1DDE08C200423490 /* NE10_cross.asm.s in Sources */,
+				1AE2D9251DD3BCCC00423490 /* NE10_setc.c in Sources */,
+				1AE2D91B1DD3BCCC00423490 /* NE10_invmat.c in Sources */,
+				1AE2D9821DDE08B900423490 /* NE10_fft_float32.neonintrinsic.c in Sources */,
+				1AE2D9D41DDE08C200423490 /* NE10_mulcmatvec.neon.s in Sources */,
+				1AE2D91C1DD3BCCC00423490 /* NE10_len.c in Sources */,
+				1AE2D9841DDE08B900423490 /* NE10_fft_generic_float32.neonintrinsic.cpp in Sources */,
+				1AE2D9DC1DDE08C200423490 /* NE10_sub.neon.s in Sources */,
+				1AE2D92A1DD3BCCC00423490 /* NE10_init.c in Sources */,
+				1AE2D91D1DD3BCCC00423490 /* NE10_mla.c in Sources */,
+				1AE2D9141DD3BCCC00423490 /* NE10_cross.c in Sources */,
+				1AE2D9B71DDE08C200423490 /* NE10_abs.asm.s in Sources */,
+				1AE2D9C01DDE08C200423490 /* NE10_detmat.neon.inc.s in Sources */,
+				1AE2D9831DDE08B900423490 /* NE10_fft_float32.neonv8.s in Sources */,
+				1AE2D9211DD3BCCC00423490 /* NE10_mulcmatvec.c in Sources */,
+				1AE2D98C1DDE08B900423490 /* NE10_rfft_float32.neonintrinsic.c in Sources */,
+				1AE2D91A1DD3BCCC00423490 /* NE10_init_math.c in Sources */,
+				1AE2D9051DD3BCCC00423490 /* NE10_fft_float32.c in Sources */,
+				1AE2D90D1DD3BCCC00423490 /* NE10_iir_init.c in Sources */,
+				1AE2D9BB1DDE08C200423490 /* NE10_addc.asm.s in Sources */,
+				1AE2D9691DDAE2CE00423490 /* Makefile in Sources */,
+				1AE2D9C51DDE08C200423490 /* NE10_dot.asm.s in Sources */,
+				1AE2D9811DDE08B900423490 /* NE10_fft_float32.neon.s in Sources */,
+				1AE2D9D81DDE08C200423490 /* NE10_normalize.neon.s in Sources */,
+				1AE2D9B81DDE08C200423490 /* NE10_abs.neon.s in Sources */,
+				1AE2D9561DDA67F700423490 /* NE10_fft_int16.neon.c in Sources */,
+				1AE2D9241DD3BCCC00423490 /* NE10_rsbc.c in Sources */,
+				1AE2D9CB1DDE08C200423490 /* NE10_len.asm.s in Sources */,
+				1AE2D9D31DDE08C200423490 /* NE10_mulcmatvec.asm.s in Sources */,
+				1AE2D9CE1DDE08C200423490 /* NE10_mla.neon.s in Sources */,
+				1AE2D9031DD3BCCC00423490 /* NE10_mask_table.c in Sources */,
+				1AE2D9131DD3BCCC00423490 /* NE10_addmat.c in Sources */,
+				1AE2D9221DD3BCCC00423490 /* NE10_mulmat.c in Sources */,
+				1AE2D9601DDA771F00423490 /* NE10_addc.neon.c in Sources */,
+				1AE2D9E01DDE08C200423490 /* NE10_transmat.neon.s in Sources */,
+				1AE2D9D91DDE08C200423490 /* NE10_rsbc.asm.s in Sources */,
+				1AE2D9CD1DDE08C200423490 /* NE10_mla.asm.s in Sources */,
+				1AE2D9BA1DDE08C200423490 /* NE10_add.neon.s in Sources */,
+				1AE2D90A1DD3BCCC00423490 /* NE10_fir.c in Sources */,
+				1AE2D90C1DD3BCCC00423490 /* NE10_iir.c in Sources */,
+				1AE2D98A1DDE08B900423490 /* NE10_fir.neon.s in Sources */,
+				1AE2D9231DD3BCCC00423490 /* NE10_normalize.c in Sources */,
+				1AE2D9571DDA67F700423490 /* NE10_fft_int32.neon.c in Sources */,
+				1AE2D9101DD3BCCC00423490 /* NE10_abs.c in Sources */,
+				1AE2D9CA1DDE08C200423490 /* NE10_invmat.neon.s in Sources */,
+				1AE2D9191DD3BCCC00423490 /* NE10_identitymat.c in Sources */,
+				1AE2D9BF1DDE08C200423490 /* NE10_detmat.asm.s in Sources */,
+				1AE2D9111DD3BCCC00423490 /* NE10_add.c in Sources */,
+				1AE2D9BE1DDE08C200423490 /* NE10_cross.neon.s in Sources */,
+				1AE2D9BC1DDE08C200423490 /* NE10_addmat.asm.s in Sources */,
+				1AE2D9DF1DDE08C200423490 /* NE10_transmat.asm.s in Sources */,
+				1AE2D9171DD3BCCC00423490 /* NE10_divc.c in Sources */,
+				1AE2D9091DD3BCCC00423490 /* NE10_fft_int32.c in Sources */,
+				1AE2D90E1DD3BCCC00423490 /* NE10_init_dsp.c in Sources */,
+				1AE2D98B1DDE08B900423490 /* NE10_iir.neon.s in Sources */,
+				1AE2D9611DDA771F00423490 /* NE10_addmat.neon.c in Sources */,
+				1AE2D9CF1DDE08C200423490 /* NE10_mlac.asm.s in Sources */,
+				1AE2D9151DD3BCCC00423490 /* NE10_detmat.c in Sources */,
+				1AE2D9DD1DDE08C200423490 /* NE10_subc.asm.s in Sources */,
+				1AE2D9D71DDE08C200423490 /* NE10_normalize.asm.s in Sources */,
+				1AE2D9261DD3BCCC00423490 /* NE10_sub.c in Sources */,
+				1AE2D9201DD3BCCC00423490 /* NE10_mulc.c in Sources */,
+				1AE2D9C81DDE08C200423490 /* NE10_identitymat.neon.s in Sources */,
+				1AE2D9871DDE08B900423490 /* NE10_fft_int16.neonintrinsic.c in Sources */,
+				1AE2D9071DD3BCCC00423490 /* NE10_fft_generic_int32.cpp in Sources */,
+				1AE2D9C41DDE08C200423490 /* NE10_divc.asm.s in Sources */,
+				1AE2D9D61DDE08C200423490 /* NE10_mulmat.neon.s in Sources */,
+				1AE2D9CC1DDE08C200423490 /* NE10_len.neon.s in Sources */,
+				1AE2D9891DDE08B900423490 /* NE10_fft_int32.neonintrinsic.c in Sources */,
+				1AE2D9551DDA67F700423490 /* NE10_fft_float32.neon.c in Sources */,
+				1AE2D9181DD3BCCC00423490 /* NE10_dot.c in Sources */,
+				1AE2D9291DD3BCCC00423490 /* NE10_transmat.c in Sources */,
+				1AE2D9041DD3BCCC00423490 /* NE10_fft.c in Sources */,
+				1AE2D9C11DDE08C200423490 /* NE10_detmat.neon.s in Sources */,
+				1AE2D9DB1DDE08C200423490 /* NE10_sub.asm.s in Sources */,
+				1AE2D9DA1DDE08C200423490 /* NE10_setc.asm.s in Sources */,
+				1AE2D9851DDE08B900423490 /* NE10_fft_generic_int32.neonintrinsic.cpp in Sources */,
+				1AE2D9D01DDE08C200423490 /* NE10_mul.asm.s in Sources */,
+				1AE2D9671DDA771F00423490 /* NE10_submat.neon.c in Sources */,
+				1AE2D9081DD3BCCC00423490 /* NE10_fft_int16.c in Sources */,
+				1AE2D9121DD3BCCC00423490 /* NE10_addc.c in Sources */,
+				1AE2D9D11DDE08C200423490 /* NE10_mul.neon.s in Sources */,
+				1AE2D9DE1DDE08C200423490 /* NE10_submat.asm.s in Sources */,
+				1AE2D9C31DDE08C200423490 /* NE10_div.neon.s in Sources */,
+				1AE2D9621DDA771F00423490 /* NE10_divc.neon.c in Sources */,
+				1AE2D90F1DD3BCCC00423490 /* NE10_rfft_float32.c in Sources */,
+				1AE2D9C91DDE08C200423490 /* NE10_invmat.asm.s in Sources */,
+				1AE2D9D21DDE08C200423490 /* NE10_mulc.asm.s in Sources */,
+				1AE2D9281DD3BCCC00423490 /* NE10_submat.c in Sources */,
+				1AE2D91F1DD3BCCC00423490 /* NE10_mul.c in Sources */,
+				1AE2D8AA1DD3B7B100423490 /* main.c in Sources */,
+				1AE2D9881DDE08B900423490 /* NE10_fft_int32.neon.s in Sources */,
+				1AE2D9E21DDE08F900423490 /* versionheader.s in Sources */,
+				1AE2D9B91DDE08C200423490 /* NE10_add.asm.s in Sources */,
+				1AE2D9661DDA771F00423490 /* NE10_subc.neon.c in Sources */,
+				1AE2D9631DDA771F00423490 /* NE10_mlac.neon.c in Sources */,
+				1AE2D91E1DD3BCCC00423490 /* NE10_mlac.c in Sources */,
+				1AE2D9C21DDE08C200423490 /* NE10_div.asm.s in Sources */,
+				1AE2D9271DD3BCCC00423490 /* NE10_subc.c in Sources */,
+				1AE2D9C61DDE08C200423490 /* NE10_dot.neon.s in Sources */,
+				1AE2D90B1DD3BCCC00423490 /* NE10_fir_init.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1AE2D8AB1DD3B7B100423490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1AE2D8AC1DD3B7B100423490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1AE2D8AE1DD3B7B100423490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"OTHER_CFLAGS[arch=*]" = (
+					"-DNE10_ENABLE_DSP",
+					"-DNE10_ENABLE_MATH",
+					"-DUNIT_TESTS",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1AE2D8AF1DD3B7B100423490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1AE2D8A11DD3B7B100423490 /* Build configuration list for PBXProject "NE10" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AE2D8AB1DD3B7B100423490 /* Debug */,
+				1AE2D8AC1DD3B7B100423490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AE2D8AD1DD3B7B100423490 /* Build configuration list for PBXNativeTarget "NE10" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AE2D8AE1DD3B7B100423490 /* Debug */,
+				1AE2D8AF1DD3B7B100423490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1AE2D89E1DD3B7B100423490 /* Project object */;
+}
